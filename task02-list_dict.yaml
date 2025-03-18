@@ -1,0 +1,56 @@
+# Copyright (c) 2025 Cisco and/or its affiliates.
+# 
+# This software is licensed to you under the terms of the Cisco Sample
+# Code License, Version 1.1 (the "License"). You may obtain a copy of the
+# License at
+# 
+#                https://developer.cisco.com/docs/licenses
+# 
+# All use of the material herein must be in accordance with the terms of
+# the License. All rights not expressly granted by the License are
+# reserved. Unless required by applicable law or agreed to separately in
+# writing, software distributed under the License is distributed on an "AS
+# IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+# or implied.
+
+---
+- name: Task02 - List & Dictionary
+  hosts: localhost
+  gather_facts: no
+  
+  vars:
+    server_list:
+      - UCSC-C220-M6S
+      - UCSC-C220-M6N
+      - UCSC-C240-M6SX
+
+    switch_list: [N9K-C93180YC-FX3,N9K-C93108TC-FX3P,N9K-C9348GC-FXP]
+    
+    server_dict:
+        Chassis: 'UCSC-C220-M6S'
+        PSU: 'UCSC-PSU1-1050W'
+        CPU: 'UCS-CPU-I8380'
+
+    switch_dict: {Chassis: 'N9K-C93180YC-FX3',PSU: 'NXA-PAC-350W-PE',FAN: 'NXA-FAN-30CFM-F'}
+
+
+  tasks:
+    - name: Print variable server_list
+      debug: 
+        var: server_list
+
+    - name: Print variable switch_list
+      debug: 
+        var: switch_list
+        verbosity: 1
+
+    - name: Print variable server_dict
+      debug: 
+        var: server_dict
+
+    - name: Print variable switch_dict
+      debug: 
+        var: switch_dict
+        verbosity: 1
+
+...
