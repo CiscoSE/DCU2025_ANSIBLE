@@ -41,7 +41,7 @@ Abflugkontrolle
 <img width="1289" alt="Screenshot 2025-03-18 at 08 05 44" src="https://github.com/user-attachments/assets/3fbae774-4908-4ef6-b485-447186d27077" />
   Es sollte sich automatisch mit dem Windows-Substem für Linux verbinden.
 
-  Falls dies nicht der Fall sein sollte, starten sie WSL
+  Falls dies nicht der Fall sein sollte, starten sie WSL  
 <img width="456" alt="Screenshot 2025-03-18 at 08 07 43" src="https://github.com/user-attachments/assets/b75a5b69-7641-49c8-950c-085953db5bd3" />
 
   wechseln in den Ordner code "cd code"
