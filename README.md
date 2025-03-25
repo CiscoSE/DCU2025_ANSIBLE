@@ -8,7 +8,7 @@ Table of contents
    * [Abflugkontrolle](#abflugkontrolle)
    * [Aufgabe 1: Hallo Welt](#aufgabe-1-hallo-welt)
    * [Aufgabe 2: Lists & Dictionaries](#aufgabe-2-lists--dictionaries)
-   * [Aufgabe 3: Loops](#aufgabe-3-loops)
+   * [Aufgabe 3: Read Input](#aufgabe-3-read-input)
    * [Aufgabe 4: ACI Tenant anlegen](#aufgabe-4-aci-tenant-anlegen)
    * [Aufgabe 5: ACI Umgebung erstellen](#aufgabe-5-aci-umgebung-erstellen)
    * [Additional Information](#additional-information)
@@ -89,14 +89,14 @@ Aufgabe 2: Lists & Dictionaries
   ansible-playbook task02-list_dict.yaml -v
   ````
   
-Aufgabe 3: Loops
+Aufgabe 3: Read Input
 ================
 
-- Öffnen sie in VS Code die Datei task03-loops.yaml
-  Jetzt verknüpfen wir Listen und Dictionaries mit Schleifen also loops.
+- Öffnen sie in VS Code die Datei task03-read_input.yaml
+  Jetzt nutzen wir eine externe Data Source und nutzen die Informationen im Playbook.
 
   ````
-  ansible-playbook task03-loops.yaml
+  ansible-playbook task03-read_input.yaml
   ````
 
 
@@ -134,6 +134,7 @@ Aufgabe 5: ACI Umgebung erstellen
   * Generieren sie die subnet_address in dem sie das 3te Oktett 130+student_id berechnen lassen
   * Erweitern sie das Playbook um einen Prompt um die student_id abzufragen
   * Berechnen die die Enkapsuliereng mit der student_id
+  * Nutzen sie eine externe Datenquelle
 
 Additional Information
 ======================
