@@ -92,7 +92,7 @@ Aufgabe 2: Lists & Dictionaries
 Aufgabe 3: Read Input
 ================
 
-- Öffnen sie in VS Code die Datei task03-read_input.yaml
+- Öffnen sie in VS Code die Datei task03-read_input.yaml  
   Jetzt nutzen wir eine externe Data Source und nutzen die Informationen im Playbook.
 
   ````
