@@ -86,7 +86,8 @@
         state: present
       delegate_to: localhost
 
-### EPG Loop
+##########Check for missing loops variables etc - BEGIN
+
     - name: Add EPGs
       cisco.aci.aci_epg:
         <<: *aci_login
@@ -97,7 +98,6 @@
         preferred_group: yes
         state: present
       delegate_to: localhost
-
 
     - name: Add a new physical domain to EPG binding
       cisco.aci.aci_epg_to_domain:
@@ -142,6 +142,8 @@
         state: present
       delegate_to: localhost
       ignore_errors: true
+
+##########Check for missing loops variables etc - End
 
     - name: Add common contract to EPG
       cisco.aci.aci_rest:

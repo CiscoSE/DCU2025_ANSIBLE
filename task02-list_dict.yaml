@@ -33,6 +33,13 @@
 
     switch_dict: {Chassis: 'N9K-C93180YC-FX3',PSU: 'NXA-PAC-350W-PE',FAN: 'NXA-FAN-30CFM-F'}
 
+    switch_list_dict: 
+      - name: 'sw1'
+        interface: 'ethernet1/0/1'
+        address: '192.168.1.1/24'
+      - name: 'sw2'
+        interface: 'ethernet1/0/8'
+        address: '192.168.2.1/24'
 
   tasks:
     - name: Print variable server_list
@@ -52,5 +59,38 @@
       debug: 
         var: switch_dict
         verbosity: 1
+    
+    - name: Print variable server_dict
+      debug: 
+        var: switch_list_dict
+
+    - name: Pause
+      pause:
+        prompt: Continue with loop on a list.
+                Press return to continue. Press Ctrl+c and then "a" to abort
+
+
+    - name: Loop through variable server_list
+      debug: 
+        var: item
+      loop: "{{ server_list }}"
+
+    - name: Loop through variable server_list
+      debug: 
+        var: item
+      loop: 
+        - UCSC-C220-M6S
+        - UCSC-C220-M6N
+        - UCSC-C240-M6SX
+
+    - name: Pause
+      pause:
+        prompt: Continue with loop on a dictionary.
+                Press return to continue. Press Ctrl+c and then "a" to abort
+
+    - name: Loop through variable server_dict
+      debug: 
+        var: item
+      loop: "{{ server_dict | dict2items }}"
 
 ...
